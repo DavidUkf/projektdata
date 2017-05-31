@@ -7,7 +7,7 @@
 
 
     <?php
-    $dbhandle = new mysqli('localhost','c1dkukucka17','mPeWkkyV9s38','c1dkukucka17');
+    $dbhandle = new mysqli('localhost','root','','c1dkukucka17');
 
     $query = "SELECT x1.poznamka as nazov,COUNT(x2.meno) as number FROM student x2 JOIN prax x1 ON x1.idprax=x2.idStudent GROUP BY x2.meno";
     $res = $dbhandle->query($query);
@@ -55,7 +55,7 @@
 
 
         <?php
-        $dbhandle = new mysqli('localhost','c1dkukucka17','mPeWkkyV9s38','c1dkukucka17');
+        $dbhandle = new mysqli('localhost','root','','c1dkukucka17');
 
         $query = "SELECT zodpovedny,COUNT(*)AS number FROM prax GROUP BY zodpovedny";
         $res = $dbhandle->query($query);

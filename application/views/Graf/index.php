@@ -7,7 +7,7 @@
 
 
     <?php
-    $dbhandle = new mysqli('localhost','c1dkukucka17','mPeWkkyV9s38','c1dkukucka17');
+    $dbhandle = new mysqli('localhost','root','','c1dkukucka17');
 
     $query = "SELECT x1.nazov,COUNT(x5.meno) as number FROM firma x1 JOIN prax_has_firma x2 ON x1.idFirma=x2.Firma_idFirma JOIN prax x3 ON x3.idprax=x2.prax_idprax JOIN student_has_prax x4 ON x4.prax_idprax=x3.idprax JOIN student x5 ON x5.idStudent=x4.student_idStudent GROUP BY x1.nazov";
     $res = $dbhandle->query($query);
@@ -55,7 +55,7 @@
 
 
         <?php
-        $dbhandle = new mysqli('localhost','c1dkukucka17','mPeWkkyV9s38','c1dkukucka17');
+        $dbhandle = new mysqli('localhost','root','','c1dkukucka17');
 
         $query = "SELECT meno,COUNT(*)AS number FROM student GROUP BY meno";
         $res = $dbhandle->query($query);
